@@ -69,11 +69,11 @@ function borrarMarca(idMarca){
   });
 }
 
-function modificarMarca(idMarca,marca,propiedad){
+function modificarMarca(idMarca,marca){
   loadingOn();
   $.ajax({
     method: 'PUT',
-    url:'api/marca/' + idMarca + '/' + marca + '/' + propiedad,
+    url:'api/marca/' + idMarca + '/' + marca,
     datatype: 'JSON',
     success: function(){
       loadingOff();

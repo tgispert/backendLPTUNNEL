@@ -45,7 +45,7 @@ class ListaDePreciosApi extends ApiBase {
         if(isset($_POST['marca'])) return $this->model->agregarMarca($_POST);
         break;
       case 'PUT':
-        if(count($this->args) > 0) return $this->model->modificarMarca($this->args[0],$this->args[1],$this->args[2]);
+        if(count($this->args) > 0) return $this->model->modificarMarca($this->args[0],$this->args[1]);
         break;
       default:
             return 'Verbo no soportado';

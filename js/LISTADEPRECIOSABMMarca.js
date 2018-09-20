@@ -7,11 +7,11 @@ $("#imagesToUpload").on("change",
   }
 );
 
-function modificarMarca(idMarca,marca,propiedad){
+function modificarMarca(idMarca,marca){
   loadingOn();
   $.ajax({
     method: 'PUT',
-    url:'api/marca/' + idMarca + '/' + marca + '/' + propiedad,
+    url:'api/marca/' + idMarca + '/' + marca,
     datatype: 'JSON',
     success: function(){
       loadingOff();
@@ -76,7 +76,7 @@ $(document).ready(function(){
   $('#js-btn-modificar-marca').on('click', function(event){
     event.preventDefault();
     var mod = $("#modMarca").serializeArray();
-    modificarMarca(mod[2].value,mod[0].value,mod[1].value);
+    modificarMarca(mod[2].value,mod[0].value);
   });
 
 

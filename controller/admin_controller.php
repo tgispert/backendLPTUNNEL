@@ -60,7 +60,7 @@ class AdminController {
 
   function modificarMarca(){
       if(isset($_REQUEST['id_marca'])){
-        $this->model->modificarMarca($_REQUEST['id_marca'],$_REQUEST['marca'],$_REQUEST['propiedad']);
+        $this->model->modificarMarca($_REQUEST['id_marca'],$_REQUEST['marca']);
       }
       else{
         $this->view->mostrarError('Error al modificar Marca');
