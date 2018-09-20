@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-md-6">
-          <ul id="listaMarca" class="list-group">
+          <ul id="listaMarcas" class="list-group">
           </ul>
         </div>
       </div>

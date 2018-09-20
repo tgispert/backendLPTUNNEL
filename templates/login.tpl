@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hostel Playa Grande - Admin</title>
+    <title>Admin - TUNNEL LISTA DE PRECIOS</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <form class="form-signin" method="POST" action="index.php?action=login">
-        <h2 class="form-signin-heading">Hostel Playa Grande</h2>
+        <h2 class="form-signin-heading">TUNNEL - LISTA DE PRECIOS</h2>
         <label for="txtUser" class="sr-only">Usuario</label>
         <input type="user" id="txtUser" name="txtUser" class="form-control" placeholder="Usuario" required autofocus>
         <label for="txtPassword" class="sr-only">Contraseña</label>

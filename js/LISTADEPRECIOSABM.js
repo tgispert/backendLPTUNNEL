@@ -4,7 +4,7 @@ function crearMarcaHTML(marca) {
   $.ajax({ url: 'js/templates/marca.mst',
      success: function(template) {
        var rendered = Mustache.render(template,marca);
-       $('#listaMarca').append(rendered);
+       $('#listaMarcas').append(rendered);
       }
     });
 }
@@ -15,10 +15,10 @@ function crearMarca(){
     url:'api/marca',
     datatype: 'JSON',
     success: function(marca){
-      $('#listaMarca').html('');
+      $('#listaMarcas').html('');
       marca.forEach(function(marca){
          var html = crearMarcaHTML(marca);
-        $('#listaMarca').append(html);
+        $('#listaMarcas').append(html);
       });
     },
     error: function () {
@@ -100,22 +100,6 @@ function getLastId(){
   });
 }
 
-function crearImagen(lastId){
-  var img = new FormData();
-  $.each(archivos, function(key, value)
-  {
-    img.append(key, value);
-  });
-  $.ajax({
-    type: "POST",
-    url: "index.php?action=agregar_imagenes&idMarca=" + lastId,
-    data: img,
-    cache: false,
-    processData: false,
-    contentType: false,
-  });
-}
-
 
 $(document).ready(function(){
 
@@ -135,6 +119,11 @@ $(document).ready(function(){
   $('body').on('click','a.js-borrar-marca', function(event){
     event.preventDefault();
     borrarMarca(this.getAttribute('idMarca'));
+  });
+
+  $('body').on('click','a.js-modificar-marca', function(event){
+    event.preventDefault();
+    modificarMarca(this.getAttribute('idMarca'));
   });
 
 });

@@ -1,5 +1,5 @@
 <li class="list-group-item" id="marca_{{id}}">
   <h3>{{marca}}</h3>
   <a class="glyphicon glyphicon-trash js-borrar-marca" href="" idMarca="{{id}}"></a>
-  <p>{{propiedad}}</p>
+  <a class="glyphicon glyphicon-arrow js-modificar-marca" href="" idMarca="{{id}}"></a>
 </li>
