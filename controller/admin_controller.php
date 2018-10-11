@@ -10,7 +10,7 @@ class AdminController {
   function __construct() {
     $this->model = new ListaDePreciosModel();
     $this->view = new ListaDePreciosView();
-    $this->checkSession();
+    /* $this->checkSession(); */
   }
 
   function checkSession(){
